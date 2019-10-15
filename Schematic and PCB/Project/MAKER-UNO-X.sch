@@ -185,34 +185,6 @@
 <library name="Misc">
 <description>Misc thing which is not a component. Such as fiducial, mounting hole, logo, etc.</description>
 <packages>
-<package name="SJ-NC">
-<description>SMD Solder Joint Normally Closed&lt;br&gt;
-Size: &lt;br&gt;
-&lt;br&gt;&lt;br&gt;
-Created by: Tony Ng&lt;br&gt;
-&lt;br&gt;
-Modification:&lt;br&gt;
-1. Ober (28Apr15) - Make the space between joint wider and track wider for higher current (15 mil)&lt;br&gt;</description>
-<wire x1="-1.778" y1="0.762" x2="-1.778" y2="-0.762" width="0.2032" layer="21"/>
-<wire x1="-1.778" y1="-0.762" x2="-1.397" y2="-1.143" width="0.2032" layer="21" curve="90"/>
-<wire x1="-1.397" y1="-1.143" x2="1.397" y2="-1.143" width="0.2032" layer="21"/>
-<wire x1="1.397" y1="-1.143" x2="1.778" y2="-0.762" width="0.2032" layer="21" curve="90"/>
-<wire x1="1.778" y1="-0.762" x2="1.778" y2="0.762" width="0.2032" layer="21"/>
-<wire x1="1.778" y1="0.762" x2="1.397" y2="1.143" width="0.2032" layer="21" curve="90"/>
-<wire x1="1.397" y1="1.143" x2="-1.397" y2="1.143" width="0.2032" layer="21"/>
-<wire x1="-1.397" y1="1.143" x2="-1.778" y2="0.762" width="0.2032" layer="21" curve="90"/>
-<wire x1="1.016" y1="0" x2="1.524" y2="0" width="0.1524" layer="51"/>
-<wire x1="-1.016" y1="0" x2="-1.524" y2="0" width="0.1524" layer="51"/>
-<wire x1="-0.254" y1="-0.127" x2="-0.254" y2="0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
-<wire x1="0.254" y1="0.127" x2="0.254" y2="-0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
-<smd name="1" x="-0.889" y="0" dx="1.016" dy="1.524" layer="1" roundness="30" cream="no"/>
-<smd name="2" x="0.889" y="0" dx="1.016" dy="1.524" layer="1" roundness="30" cream="no"/>
-<text x="0" y="1.397" size="0.762" layer="25" ratio="15" align="bottom-center">&gt;NAME</text>
-<wire x1="-0.635" y1="0" x2="0.635" y2="0" width="0.381" layer="1"/>
-<rectangle x1="-0.508" y1="-0.8128" x2="0.508" y2="0.8128" layer="29"/>
-<wire x1="-0.5334" y1="-0.7366" x2="0.5334" y2="-0.7366" width="0.0508" layer="41"/>
-<wire x1="-0.5334" y1="0.7366" x2="0.5334" y2="0.7366" width="0.0508" layer="41"/>
-</package>
 </packages>
 <symbols>
 <symbol name="CYTRON-LOGO">
@@ -3559,16 +3531,6 @@ Modification:&lt;br&gt;
 <rectangle x1="13.09878125" y1="7.62" x2="15.44828125" y2="7.638034375" layer="94"/>
 <rectangle x1="13.7668" y1="7.638034375" x2="14.780259375" y2="7.65606875" layer="94"/>
 </symbol>
-<symbol name="SJ-NC">
-<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
-<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
-<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
-<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-3.81" size="1.778" layer="97">&gt;LABEL</text>
-<pin name="2" x="5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1"/>
-</symbol>
 <symbol name="BORDER-A4">
 <wire x1="0" y1="190.5" x2="279.4" y2="190.5" width="0.4064" layer="94"/>
 <wire x1="279.4" y1="190.5" x2="279.4" y2="0" width="0.4064" layer="94"/>
@@ -3612,31 +3574,6 @@ Modification:&lt;br&gt;
 <device name="">
 <technologies>
 <technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SJ-NC">
-<description>SolderJumper_NormallyClosed</description>
-<gates>
-<gate name="G$1" symbol="SJ-NC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SJ-NC">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="CYTRON-PC" value="" constant="no"/>
-<attribute name="DESC" value="Solder Jumper" constant="no"/>
-<attribute name="LABEL" value="" constant="no"/>
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="REMARK" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
-</technology>
 </technologies>
 </device>
 </devices>
@@ -10868,13 +10805,13 @@ Created by: Wai Weng</description>
 </part>
 <part name="CN1" library="Header and Connector" deviceset="USB-5PIN" device="_(MICRO-B-RA)" value=""/>
 <part name="Y1" library="Others" deviceset="XTAL" device="_(SMD-HC49UP)" technology="_16MHZ" value="16MHz"/>
+<part name="C4" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
 <part name="C5" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
-<part name="C6" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
-<part name="C9" library="Others" deviceset="CAP-C" device="_(1608)" technology="_1UF" value="1uF"/>
+<part name="C8" library="Others" deviceset="CAP-C" device="_(1608)" technology="_1UF" value="1uF"/>
 <part name="U$3" library="Supply" deviceset="+5V" device=""/>
 <part name="GND2" library="Supply" deviceset="GND" device=""/>
-<part name="C8" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
-<part name="C7" library="Others" deviceset="CAP-C" device="_(1608)" technology="_30PF" value="30pF"/>
+<part name="C7" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
+<part name="C6" library="Others" deviceset="CAP-C" device="_(1608)" technology="_30PF" value="30pF"/>
 <part name="C1" library="Others" deviceset="CAP-C" device="_(1608)" technology="_30PF" value="30pF"/>
 <part name="GND3" library="Supply" deviceset="GND" device=""/>
 <part name="U$2" library="Supply" deviceset="+5V" device=""/>
@@ -10887,8 +10824,8 @@ Created by: Wai Weng</description>
 <part name="GND4" library="Supply" deviceset="GND" device=""/>
 <part name="C2" library="Others" deviceset="CAP-C" device="_(1608)" technology="_1UF" value="1uF"/>
 <part name="R13" library="Others" deviceset="RESISTOR" device="_(1608)" technology="_10K" value="10K"/>
-<part name="C14" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
-<part name="C4" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
+<part name="C13" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
+<part name="C3" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
 <part name="DS11" library="Others" deviceset="LED" device="_(1608)" technology="_BLUE" value="Blue">
 <attribute name="LABEL" value="L11"/>
 </part>
@@ -10940,8 +10877,8 @@ Created by: Wai Weng</description>
 <part name="GND9" library="Supply" deviceset="GND" device=""/>
 <part name="GND10" library="Supply" deviceset="GND" device=""/>
 <part name="U4" library="IC &amp; Transistor" deviceset="VREG" device="_(SOT-23-5)" technology="_RT9013-33GB" value="3.3V 500mA"/>
-<part name="C11" library="Others" deviceset="CAP-E-ALUMINIUM" device="_(CHEMICON-F55)" technology="_16V220UF" value="16V220uF"/>
-<part name="C15" library="Others" deviceset="CAP-C" device="_(2012)" technology="_10UF" value="10uF"/>
+<part name="C10" library="Others" deviceset="CAP-E-ALUMINIUM" device="_(CHEMICON-F55)" technology="_16V220UF" value="16V220uF"/>
+<part name="C14" library="Others" deviceset="CAP-C" device="_(2012)" technology="_10UF" value="10uF"/>
 <part name="GND12" library="Supply" deviceset="GND" device=""/>
 <part name="U$6" library="Supply" deviceset="+3V3" device=""/>
 <part name="U$5" library="Supply" deviceset="+5V" device=""/>
@@ -11011,7 +10948,7 @@ Created by: Wai Weng</description>
 <part name="Q11" library="IC &amp; Transistor" deviceset="MOSFET-N" device="_(SOT-23)" technology="_BSS138" value="50V 220mA"/>
 <part name="R33" library="Others" deviceset="RESISTOR" device="_(1608)" technology="_3M3" value="3M3"/>
 <part name="U$23" library="Supply" deviceset="+3V3" device=""/>
-<part name="C16" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
+<part name="C15" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
 <part name="GND30" library="Supply" deviceset="GND" device=""/>
 <part name="GND31" library="Supply" deviceset="GND" device=""/>
 <part name="U$24" library="Supply" deviceset="+5V" device=""/>
@@ -11019,12 +10956,12 @@ Created by: Wai Weng</description>
 <part name="GND33" library="Supply" deviceset="GND" device=""/>
 <part name="U3" library="IC &amp; Transistor" deviceset="555" device="_(SOIC-08N)"/>
 <part name="GND34" library="Supply" deviceset="GND" device=""/>
-<part name="C13" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
+<part name="C12" library="Others" deviceset="CAP-C" device="_(1608)" technology="_0.1UF" value="0.1uF"/>
 <part name="R4" library="Others" deviceset="RESISTOR" device="_(1608)" technology="_1M" value="1M"/>
 <part name="GND35" library="Supply" deviceset="GND" device=""/>
-<part name="C12" library="Others" deviceset="CAP-C" device="_(1608)" technology="_10NF" value="10nF"/>
+<part name="C11" library="Others" deviceset="CAP-C" device="_(1608)" technology="_10NF" value="10nF"/>
 <part name="GND36" library="Supply" deviceset="GND" device=""/>
-<part name="C10" library="Others" deviceset="CAP-C" device="_(2012)" technology="_10UF" value="10uF"/>
+<part name="C9" library="Others" deviceset="CAP-C" device="_(2012)" technology="_10UF" value="10uF"/>
 <part name="GND37" library="Supply" deviceset="GND" device=""/>
 <part name="R9" library="Others" deviceset="RESISTOR" device="_(1608)" technology="_1K" value="1K"/>
 <part name="R5" library="Others" deviceset="RESISTOR" device="_(1608)" technology="_22K" value="22K"/>
@@ -11041,7 +10978,6 @@ Created by: Wai Weng</description>
 </part>
 <part name="R14" library="Others" deviceset="RESISTOR" device="_(1608)" technology="_1K" value="1K"/>
 <part name="GND40" library="Supply" deviceset="GND" device=""/>
-<part name="JP6" library="Misc" deviceset="SJ-NC" device=""/>
 <part name="U$21" library="Supply" deviceset="+3V3" device=""/>
 <part name="U$22" library="Supply" deviceset="+3V3" device=""/>
 <part name="GND11" library="Supply" deviceset="GND" device=""/>
@@ -11125,19 +11061,19 @@ Created by: Wai Weng</description>
 </instance>
 <instance part="CN1" gate="G$1" x="12.7" y="162.56"/>
 <instance part="Y1" gate="G$1" x="22.86" y="33.02"/>
-<instance part="C5" gate="G$1" x="30.48" y="175.26" smashed="yes" rot="R90">
+<instance part="C4" gate="G$1" x="30.48" y="175.26" smashed="yes" rot="R90">
 <attribute name="NAME" x="31.75" y="176.022" size="1.778" layer="95"/>
 <attribute name="VALUE" x="31.75" y="172.72" size="1.778" layer="96"/>
 </instance>
-<instance part="C6" gate="G$1" x="30.48" y="167.64" smashed="yes" rot="R90">
+<instance part="C5" gate="G$1" x="30.48" y="167.64" smashed="yes" rot="R90">
 <attribute name="NAME" x="31.75" y="168.402" size="1.778" layer="95"/>
 <attribute name="VALUE" x="31.75" y="165.1" size="1.778" layer="96"/>
 </instance>
-<instance part="C9" gate="G$1" x="78.74" y="182.88" rot="R270"/>
+<instance part="C8" gate="G$1" x="78.74" y="182.88" rot="R270"/>
 <instance part="U$3" gate="G$1" x="86.36" y="182.88" rot="R270"/>
 <instance part="GND2" gate="1" x="40.64" y="165.1"/>
-<instance part="C8" gate="G$1" x="50.8" y="154.94" rot="R180"/>
-<instance part="C7" gate="G$1" x="33.02" y="25.4"/>
+<instance part="C7" gate="G$1" x="50.8" y="154.94" rot="R180"/>
+<instance part="C6" gate="G$1" x="33.02" y="25.4"/>
 <instance part="C1" gate="G$1" x="12.7" y="25.4"/>
 <instance part="GND3" gate="1" x="33.02" y="5.08"/>
 <instance part="U$2" gate="G$1" x="157.48" y="63.5"/>
@@ -11149,8 +11085,8 @@ Created by: Wai Weng</description>
 <instance part="GND4" gate="1" x="12.7" y="45.72"/>
 <instance part="C2" gate="G$1" x="20.32" y="58.42" rot="R270"/>
 <instance part="R13" gate="G$1" x="157.48" y="58.42" rot="R90"/>
-<instance part="C14" gate="G$1" x="147.32" y="53.34" rot="R270"/>
-<instance part="C4" gate="G$1" x="20.32" y="48.26" rot="R270"/>
+<instance part="C13" gate="G$1" x="147.32" y="53.34" rot="R270"/>
+<instance part="C3" gate="G$1" x="20.32" y="48.26" rot="R270"/>
 <instance part="DS11" gate="G$1" x="210.82" y="55.88" smashed="yes">
 <attribute name="NAME" x="212.09" y="59.69" size="1.778" layer="95" align="bottom-center"/>
 <attribute name="LABEL" x="212.09" y="53.848" size="1.778" layer="97" align="top-center"/>
@@ -11221,11 +11157,11 @@ Created by: Wai Weng</description>
 <instance part="GND9" gate="1" x="55.88" y="83.82"/>
 <instance part="GND10" gate="1" x="157.48" y="15.24"/>
 <instance part="U4" gate="G$1" x="134.62" y="167.64"/>
-<instance part="C11" gate="G$1" x="119.38" y="162.56" smashed="yes">
+<instance part="C10" gate="G$1" x="119.38" y="162.56" smashed="yes">
 <attribute name="NAME" x="116.078" y="158.496" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="124.46" y="154.686" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="C15" gate="G$1" x="149.86" y="160.02"/>
+<instance part="C14" gate="G$1" x="149.86" y="160.02"/>
 <instance part="GND12" gate="1" x="134.62" y="152.4"/>
 <instance part="U$6" gate="G$1" x="154.94" y="170.18" rot="R270"/>
 <instance part="U$5" gate="G$1" x="30.48" y="127"/>
@@ -11342,7 +11278,7 @@ Created by: Wai Weng</description>
 </instance>
 <instance part="R33" gate="G$1" x="248.92" y="157.48" rot="R270"/>
 <instance part="U$23" gate="G$1" x="256.54" y="177.8"/>
-<instance part="C16" gate="G$1" x="248.92" y="175.26" rot="R270"/>
+<instance part="C15" gate="G$1" x="248.92" y="175.26" rot="R270"/>
 <instance part="GND30" gate="1" x="241.3" y="172.72"/>
 <instance part="GND31" gate="1" x="198.12" y="157.48"/>
 <instance part="U$24" gate="G$1" x="114.3" y="170.18" rot="R90"/>
@@ -11350,12 +11286,12 @@ Created by: Wai Weng</description>
 <instance part="GND33" gate="1" x="149.86" y="152.4"/>
 <instance part="U3" gate="G$1" x="124.46" y="106.68"/>
 <instance part="GND34" gate="1" x="127" y="83.82"/>
-<instance part="C13" gate="G$1" x="137.16" y="121.92" rot="R270"/>
+<instance part="C12" gate="G$1" x="137.16" y="121.92" rot="R270"/>
 <instance part="R4" gate="G$1" x="104.14" y="119.38" rot="R90"/>
 <instance part="GND35" gate="1" x="144.78" y="116.84"/>
-<instance part="C12" gate="G$1" x="132.08" y="88.9"/>
+<instance part="C11" gate="G$1" x="132.08" y="88.9"/>
 <instance part="GND36" gate="1" x="132.08" y="83.82"/>
-<instance part="C10" gate="G$1" x="104.14" y="91.44"/>
+<instance part="C9" gate="G$1" x="104.14" y="91.44"/>
 <instance part="GND37" gate="1" x="104.14" y="83.82"/>
 <instance part="R9" gate="G$1" x="144.78" y="106.68"/>
 <instance part="R5" gate="G$1" x="104.14" y="109.22" rot="R90"/>
@@ -11366,7 +11302,7 @@ Created by: Wai Weng</description>
 <instance part="R11" gate="G$1" x="154.94" y="101.6" rot="R90"/>
 <instance part="R12" gate="G$1" x="154.94" y="91.44" rot="R90"/>
 <instance part="GND38" gate="1" x="154.94" y="83.82"/>
-<instance part="U$27" gate="G$1" x="167.64" y="127"/>
+<instance part="U$27" gate="G$1" x="160.02" y="127" rot="R270"/>
 <instance part="U$28" gate="G$1" x="22.86" y="175.26"/>
 <instance part="GND39" gate="1" x="22.86" y="147.32"/>
 <instance part="GND41" gate="1" x="73.66" y="180.34"/>
@@ -11376,7 +11312,6 @@ Created by: Wai Weng</description>
 </instance>
 <instance part="R14" gate="G$1" x="165.1" y="91.44" rot="R90"/>
 <instance part="GND40" gate="1" x="165.1" y="83.82"/>
-<instance part="JP6" gate="G$1" x="160.02" y="127"/>
 <instance part="U$21" gate="G$1" x="43.18" y="104.14"/>
 <instance part="U$22" gate="G$1" x="35.56" y="119.38" rot="R270"/>
 <instance part="GND11" gate="1" x="43.18" y="83.82"/>
@@ -11389,7 +11324,7 @@ Created by: Wai Weng</description>
 <nets>
 <net name="GND" class="0">
 <segment>
-<pinref part="C8" gate="G$1" pin="1"/>
+<pinref part="C7" gate="G$1" pin="1"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -11400,15 +11335,15 @@ Created by: Wai Weng</description>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="167.64" x2="33.02" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="40.64" y1="167.64" x2="33.02" y2="167.64" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="40.64" y1="175.26" x2="33.02" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="167.64" x2="40.64" y2="175.26" width="0.1524" layer="91"/>
 <junction x="40.64" y="167.64"/>
 </segment>
 <segment>
-<pinref part="C9" gate="G$1" pin="2"/>
+<pinref part="C8" gate="G$1" pin="2"/>
 <pinref part="GND41" gate="1" pin="GND"/>
 <wire x1="76.2" y1="182.88" x2="73.66" y2="182.88" width="0.1524" layer="91"/>
 </segment>
@@ -11423,7 +11358,7 @@ Created by: Wai Weng</description>
 <pinref part="GND8" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C7" gate="G$1" pin="2"/>
+<pinref part="C6" gate="G$1" pin="2"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -11472,12 +11407,12 @@ Created by: Wai Weng</description>
 <pinref part="GND10" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C15" gate="G$1" pin="2"/>
+<pinref part="C14" gate="G$1" pin="2"/>
 <wire x1="149.86" y1="154.94" x2="149.86" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="GND33" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C11" gate="G$1" pin="-"/>
+<pinref part="C10" gate="G$1" pin="-"/>
 <wire x1="119.38" y1="154.94" x2="119.38" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="GND32" gate="1" pin="GND"/>
 </segment>
@@ -11496,14 +11431,14 @@ Created by: Wai Weng</description>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="17.78" y1="58.42" x2="12.7" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="17.78" y1="48.26" x2="12.7" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="58.42" x2="12.7" y2="48.26" width="0.1524" layer="91"/>
 <junction x="12.7" y="48.26"/>
 </segment>
 <segment>
 <pinref part="GND30" gate="1" pin="GND"/>
-<pinref part="C16" gate="G$1" pin="2"/>
+<pinref part="C15" gate="G$1" pin="2"/>
 <wire x1="241.3" y1="175.26" x2="246.38" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -11517,17 +11452,17 @@ Created by: Wai Weng</description>
 <wire x1="127" y1="86.36" x2="127" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C13" gate="G$1" pin="1"/>
+<pinref part="C12" gate="G$1" pin="1"/>
 <pinref part="GND35" gate="1" pin="GND"/>
 <wire x1="142.24" y1="121.92" x2="144.78" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="121.92" x2="144.78" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C12" gate="G$1" pin="2"/>
+<pinref part="C11" gate="G$1" pin="2"/>
 <pinref part="GND36" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C10" gate="G$1" pin="2"/>
+<pinref part="C9" gate="G$1" pin="2"/>
 <pinref part="GND37" gate="1" pin="GND"/>
 <wire x1="104.14" y1="88.9" x2="104.14" y2="86.36" width="0.1524" layer="91"/>
 </segment>
@@ -11579,14 +11514,14 @@ Created by: Wai Weng</description>
 <label x="86.36" y="165.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="C14" gate="G$1" pin="2"/>
+<pinref part="C13" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="53.34" x2="137.16" y2="53.34" width="0.1524" layer="91"/>
 <label x="137.16" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="C11" gate="G$1" pin="+"/>
+<pinref part="C10" gate="G$1" pin="+"/>
 <pinref part="U4" gate="G$1" pin="IN"/>
 <wire x1="124.46" y1="170.18" x2="119.38" y2="170.18" width="0.1524" layer="91"/>
 <junction x="119.38" y="170.18"/>
@@ -11597,7 +11532,7 @@ Created by: Wai Weng</description>
 <segment>
 <pinref part="U2" gate="G$1" pin="VCC"/>
 <pinref part="U$3" gate="G$1" pin="+5V"/>
-<pinref part="C9" gate="G$1" pin="1"/>
+<pinref part="C8" gate="G$1" pin="1"/>
 <wire x1="83.82" y1="182.88" x2="86.36" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="182.88" x2="86.36" y2="172.72" width="0.1524" layer="91"/>
 <junction x="86.36" y="182.88"/>
@@ -11608,10 +11543,10 @@ Created by: Wai Weng</description>
 <wire x1="22.86" y1="175.26" x2="22.86" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="CN1" gate="G$1" pin="VCC"/>
 <wire x1="20.32" y1="167.64" x2="22.86" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="1"/>
+<pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="22.86" y1="175.26" x2="25.4" y2="175.26" width="0.1524" layer="91"/>
 <junction x="22.86" y="175.26"/>
-<pinref part="C6" gate="G$1" pin="1"/>
+<pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="22.86" y1="167.64" x2="25.4" y2="167.64" width="0.1524" layer="91"/>
 <junction x="22.86" y="167.64"/>
 </segment>
@@ -11716,14 +11651,31 @@ Created by: Wai Weng</description>
 <pinref part="U$25" gate="G$1" pin="+5V"/>
 </segment>
 <segment>
-<pinref part="JP6" gate="G$1" pin="2"/>
 <pinref part="U$27" gate="G$1" pin="+5V"/>
-<wire x1="165.1" y1="127" x2="167.64" y2="127" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="VCC"/>
+<pinref part="U3" gate="G$1" pin="!RST"/>
+<wire x1="132.08" y1="121.92" x2="132.08" y2="119.38" width="0.1524" layer="91"/>
+<junction x="132.08" y="121.92"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="132.08" y1="121.92" x2="134.62" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="154.94" y1="127" x2="132.08" y2="127" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="127" x2="127" y2="127" width="0.1524" layer="91"/>
+<wire x1="127" y1="127" x2="104.14" y2="127" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="127" x2="104.14" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="121.92" x2="132.08" y2="127" width="0.1524" layer="91"/>
+<junction x="132.08" y="127"/>
+<wire x1="127" y1="119.38" x2="127" y2="127" width="0.1524" layer="91"/>
+<junction x="127" y="127"/>
+<pinref part="Q1" gate="G$1" pin="E"/>
+<wire x1="154.94" y1="116.84" x2="154.94" y2="127" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="127" x2="154.94" y2="127" width="0.1524" layer="91"/>
+<junction x="154.94" y="127"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="C8" gate="G$1" pin="2"/>
+<pinref part="C7" gate="G$1" pin="2"/>
 <pinref part="U2" gate="G$1" pin="V3"/>
 <wire x1="50.8" y1="157.48" x2="50.8" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="165.1" x2="58.42" y2="165.1" width="0.1524" layer="91"/>
@@ -11732,7 +11684,7 @@ Created by: Wai Weng</description>
 <net name="N$4" class="0">
 <segment>
 <pinref part="Y1" gate="G$1" pin="2"/>
-<pinref part="C7" gate="G$1" pin="1"/>
+<pinref part="C6" gate="G$1" pin="1"/>
 <pinref part="U1" gate="G$1" pin="PB7(XTAL2/TOSC2)"/>
 <wire x1="38.1" y1="35.56" x2="33.02" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="35.56" x2="33.02" y2="33.02" width="0.1524" layer="91"/>
@@ -11756,7 +11708,7 @@ Created by: Wai Weng</description>
 <net name="AREF" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="AREF"/>
-<pinref part="C4" gate="G$1" pin="1"/>
+<pinref part="C3" gate="G$1" pin="1"/>
 <label x="27.94" y="48.26" size="1.778" layer="95"/>
 <wire x1="25.4" y1="48.26" x2="35.56" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="48.26" x2="35.56" y2="50.8" width="0.1524" layer="91"/>
@@ -12167,7 +12119,7 @@ Created by: Wai Weng</description>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="OUT"/>
-<pinref part="C15" gate="G$1" pin="1"/>
+<pinref part="C14" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="170.18" x2="149.86" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="170.18" x2="149.86" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="G$1" pin="+3V3"/>
@@ -12188,7 +12140,7 @@ Created by: Wai Weng</description>
 <wire x1="259.08" y1="175.26" x2="256.54" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="U$23" gate="G$1" pin="+3V3"/>
 <wire x1="256.54" y1="177.8" x2="256.54" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="C16" gate="G$1" pin="1"/>
+<pinref part="C15" gate="G$1" pin="1"/>
 <wire x1="254" y1="175.26" x2="256.54" y2="175.26" width="0.1524" layer="91"/>
 <junction x="256.54" y="175.26"/>
 </segment>
@@ -12203,7 +12155,7 @@ Created by: Wai Weng</description>
 <pinref part="S1" gate="G$1" pin="2"/>
 <wire x1="157.48" y1="50.8" x2="157.48" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="R13" gate="G$1" pin="1"/>
-<pinref part="C14" gate="G$1" pin="1"/>
+<pinref part="C13" gate="G$1" pin="1"/>
 <label x="162.56" y="53.34" size="1.778" layer="95"/>
 <wire x1="152.4" y1="53.34" x2="157.48" y2="53.34" width="0.1524" layer="91"/>
 <junction x="157.48" y="53.34"/>
@@ -12405,7 +12357,7 @@ Created by: Wai Weng</description>
 <net name="N$1" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="CTRL"/>
-<pinref part="C12" gate="G$1" pin="1"/>
+<pinref part="C11" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -12455,7 +12407,7 @@ Created by: Wai Weng</description>
 <wire x1="104.14" y1="104.14" x2="104.14" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="TRI"/>
 <wire x1="104.14" y1="99.06" x2="109.22" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="C10" gate="G$1" pin="1"/>
+<pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="99.06" x2="111.76" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="96.52" x2="104.14" y2="99.06" width="0.1524" layer="91"/>
 <junction x="104.14" y="99.06"/>
@@ -12468,29 +12420,6 @@ Created by: Wai Weng</description>
 <segment>
 <pinref part="DS5" gate="G$1" pin="C"/>
 <pinref part="R14" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="VCC"/>
-<pinref part="U3" gate="G$1" pin="!RST"/>
-<wire x1="132.08" y1="121.92" x2="132.08" y2="119.38" width="0.1524" layer="91"/>
-<junction x="132.08" y="121.92"/>
-<pinref part="C13" gate="G$1" pin="2"/>
-<wire x1="132.08" y1="121.92" x2="134.62" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="JP6" gate="G$1" pin="1"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="154.94" y1="127" x2="132.08" y2="127" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="127" x2="127" y2="127" width="0.1524" layer="91"/>
-<wire x1="127" y1="127" x2="104.14" y2="127" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="127" x2="104.14" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="121.92" x2="132.08" y2="127" width="0.1524" layer="91"/>
-<junction x="132.08" y="127"/>
-<wire x1="127" y1="119.38" x2="127" y2="127" width="0.1524" layer="91"/>
-<junction x="127" y="127"/>
-<pinref part="Q1" gate="G$1" pin="E"/>
-<wire x1="154.94" y1="116.84" x2="154.94" y2="127" width="0.1524" layer="91"/>
-<junction x="154.94" y="127"/>
 </segment>
 </net>
 <net name="DB-GND" class="0">
