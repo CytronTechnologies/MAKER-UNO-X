@@ -4023,10 +4023,7 @@ Lead Pitch: 1.27mm</description>
 <pin name="PC0(ADC0)" x="22.86" y="25.4" length="short" rot="R180"/>
 <pin name="PC6(/RESET)" x="-20.32" y="25.4" length="short" function="dot"/>
 </symbol>
-<symbol name="CH340G">
-<description>SMD USB UART CH340G, 16pins.&lt;br&gt;
-&lt;br&gt;
-Created by: OoiBP</description>
+<symbol name="CH9340C">
 <wire x1="-10.16" y1="12.7" x2="-10.16" y2="-10.16" width="0.2032" layer="94"/>
 <wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.2032" layer="94"/>
 <wire x1="10.16" y1="-10.16" x2="10.16" y2="12.7" width="0.2032" layer="94"/>
@@ -4037,15 +4034,15 @@ Created by: OoiBP</description>
 <pin name="V3" x="-12.7" y="2.54" length="short"/>
 <pin name="UD+" x="-12.7" y="0" length="short"/>
 <pin name="UD-" x="-12.7" y="-2.54" length="short"/>
-<pin name="XI" x="-12.7" y="-5.08" length="short"/>
-<pin name="XO" x="-12.7" y="-7.62" length="short"/>
+<pin name="RST" x="-12.7" y="-5.08" length="short"/>
+<pin name="H_F#" x="-12.7" y="-7.62" length="short"/>
 <pin name="CTS#" x="12.7" y="-7.62" length="short" rot="R180"/>
 <pin name="DSR#" x="12.7" y="-5.08" length="short" rot="R180"/>
 <pin name="RI#" x="12.7" y="-2.54" length="short" rot="R180"/>
 <pin name="DCD#" x="12.7" y="0" length="short" rot="R180"/>
 <pin name="DTR#" x="12.7" y="2.54" length="short" rot="R180"/>
 <pin name="RTS#" x="12.7" y="5.08" length="short" rot="R180"/>
-<pin name="R232" x="12.7" y="7.62" length="short" rot="R180"/>
+<pin name="TNOW" x="12.7" y="7.62" length="short" rot="R180"/>
 <pin name="VCC" x="12.7" y="10.16" length="short" direction="pwr" rot="R180"/>
 <text x="-10.16" y="15.24" size="1.778" layer="95" align="top-left">&gt;NAME</text>
 <text x="-10.16" y="-12.7" size="1.778" layer="97">&gt;MPN</text>
@@ -4194,47 +4191,39 @@ Created by: OoiBP</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CH340G">
-<description>SMD USB UART CH340.</description>
+<deviceset name="CH9340C" prefix="U?">
+<description>CH9340C USB to UART Converter&lt;br&gt;
+&lt;br&gt;
+Created by: Wai Weng</description>
 <gates>
-<gate name="G$1" symbol="CH340G" x="0" y="0"/>
+<gate name="G$1" symbol="CH9340C" x="0" y="0"/>
 </gates>
 <devices>
-<device name="_(SOIC-16N)" package="SOIC-16N">
+<device name="" package="SOIC-16N">
 <connects>
 <connect gate="G$1" pin="CTS#" pad="9"/>
 <connect gate="G$1" pin="DCD#" pad="12"/>
 <connect gate="G$1" pin="DSR#" pad="10"/>
 <connect gate="G$1" pin="DTR#" pad="13"/>
 <connect gate="G$1" pin="GND" pad="1"/>
-<connect gate="G$1" pin="R232" pad="15"/>
+<connect gate="G$1" pin="H_F#" pad="8"/>
 <connect gate="G$1" pin="RI#" pad="11"/>
+<connect gate="G$1" pin="RST" pad="7"/>
 <connect gate="G$1" pin="RTS#" pad="14"/>
 <connect gate="G$1" pin="RXD" pad="3"/>
+<connect gate="G$1" pin="TNOW" pad="15"/>
 <connect gate="G$1" pin="TXD" pad="2"/>
 <connect gate="G$1" pin="UD+" pad="5"/>
 <connect gate="G$1" pin="UD-" pad="6"/>
 <connect gate="G$1" pin="V3" pad="4"/>
 <connect gate="G$1" pin="VCC" pad="16"/>
-<connect gate="G$1" pin="XI" pad="7"/>
-<connect gate="G$1" pin="XO" pad="8"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="CYTRON-PC" value="S-IC-CH340G-SO16" constant="no"/>
-<attribute name="DESC" value="S USB UART CH340G SOIC16" constant="no"/>
-<attribute name="LABEL" value="" constant="no"/>
+<attribute name="CYTRON-PC" value="" constant="no"/>
+<attribute name="DESC" value="S CH9340C USB UART SOIC16" constant="no"/>
 <attribute name="MF" value="WCH" constant="no"/>
-<attribute name="MPN" value="CH340G" constant="no"/>
-<attribute name="REMARK" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
-</technology>
-<technology name="_CH340C">
-<attribute name="CYTRON-PC" value="S-IC-CH340C-SO16" constant="no"/>
-<attribute name="DESC" value="S USB UART CH340C SOIC16" constant="no"/>
-<attribute name="LABEL" value="" constant="no"/>
-<attribute name="MF" value="WCH" constant="no"/>
-<attribute name="MPN" value="CH340C" constant="no"/>
+<attribute name="MPN" value="CH9340C" constant="no"/>
 <attribute name="REMARK" value="" constant="no"/>
 <attribute name="VALUE" value="" constant="no"/>
 </technology>
@@ -10805,7 +10794,7 @@ Created by: Wai Weng</description>
 <part name="JP1" library="Header and Connector" deviceset="HEADER-1X08" device="_(SMD-FEMALE-TYPE1)" value="8 Ways"/>
 <part name="JP4" library="Header and Connector" deviceset="HEADER-1X08" device="_(SMD-FEMALE-TYPE1)" value="8 Ways"/>
 <part name="JP3" library="Header and Connector" deviceset="HEADER-1X10" device="_(SMD-FEMALE-TYPE1)" value="10 Ways"/>
-<part name="U2" library="IC &amp; Transistor" deviceset="CH340G" device="_(SOIC-16N)" technology="_CH340C" value=""/>
+<part name="U2" library="IC &amp; Transistor" deviceset="CH9340C" device="" value=""/>
 <part name="DS17" library="Others" deviceset="LED" device="_(1608)" technology="_BLUE" value="Blue">
 <attribute name="LABEL" value="L13"/>
 </part>
@@ -11365,8 +11354,12 @@ Created by: Wai Weng</description>
 <segment>
 <pinref part="U2" gate="G$1" pin="GND"/>
 <pinref part="GND18" gate="1" pin="GND"/>
-<wire x1="55.88" y1="149.86" x2="55.88" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="149.86" x2="55.88" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="154.94" x2="55.88" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="172.72" x2="58.42" y2="172.72" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="H_F#"/>
+<wire x1="58.42" y1="154.94" x2="55.88" y2="154.94" width="0.1524" layer="91"/>
+<junction x="55.88" y="154.94"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
